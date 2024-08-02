@@ -2,8 +2,8 @@ package object.tower;
 import object.WeatherProvider.WeatherProvider;
 import object.airCraft.coordinates.Coordinates;
 
-public class WeatherTower {
-    WeatherTower() {}
+public class WeatherTower extends Tower {
+    public WeatherTower() {}
 
     public String getWeather(Coordinates coordinates) {
         WeatherProvider weatherProvider = WeatherProvider.getInstance();

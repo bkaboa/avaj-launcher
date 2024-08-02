@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import object.airCraft.Flyable;
 
-public class Tower extends WeatherTower {
+public class Tower {
     private final List<Flyable> observers = new ArrayList<>();
 
     public void register(Flyable flyable) {

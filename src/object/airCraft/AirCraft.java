@@ -6,6 +6,7 @@ import object.exception.MethodeException;
 public class AirCraft extends Flyable {
     protected long id;
     protected String name;
+    protected String type;
     protected Coordinates coordinates;
 
     protected AirCraft(long p_id, String p_name, Coordinates p_coordinates) {
@@ -17,5 +18,10 @@ public class AirCraft extends Flyable {
     @Override
     public void updateConditions() {
         throw new MethodeException("Aircraft", "updateConditions");
+    }
+
+    @Override
+    public String toString() {
+        return (String.format("%s#%s(%d) ", this.type, this.name, this.id));
     }
 }

@@ -1,4 +1,4 @@
-package object.exception;
+package src.object.exception;
 
 public class MethodeException extends RuntimeException {
     public MethodeException(String typeClass, String methode) {

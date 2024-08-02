@@ -1,6 +1,6 @@
-package object.WeatherProvider;
+package src.object.WeatherProvider;
 
-import object.airCraft.coordinates.Coordinates;
+import src.object.airCraft.coordinates.Coordinates;
 
 public class WeatherProvider {
     private static final String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};

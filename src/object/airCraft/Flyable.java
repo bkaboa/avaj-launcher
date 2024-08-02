@@ -1,6 +1,6 @@
-package object.airCraft;
+package src.object.airCraft;
 
-import object.tower.WeatherTower;
+import src.object.tower.WeatherTower;
 
 abstract public class Flyable 
 {

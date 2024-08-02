@@ -1,7 +1,7 @@
-package object.airCraft;
+package src.object.airCraft;
 
-import object.airCraft.coordinates.Coordinates;
-import object.exception.AirCraftNotSupportedException;
+import src.object.airCraft.coordinates.Coordinates;
+import src.object.exception.AirCraftNotSupportedException;
 
 public class AirCraftFactory {
     private AirCraftFactory()  {}

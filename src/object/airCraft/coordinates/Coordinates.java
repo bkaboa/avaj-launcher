@@ -1,4 +1,4 @@
-package object.airCraft.coordinates;
+package src.object.airCraft.coordinates;
 
 public class Coordinates {
     private int longitude = 0;

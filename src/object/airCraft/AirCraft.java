@@ -1,7 +1,7 @@
-package object.airCraft;
+package src.object.airCraft;
 
-import object.airCraft.coordinates.Coordinates;
-import object.exception.MethodeException;
+import src.object.airCraft.coordinates.Coordinates;
+import src.object.exception.MethodeException;
 
 public class AirCraft extends Flyable {
     protected long id;

@@ -1,4 +1,4 @@
-package object.exception;
+package src.object.exception;
 
 public class AirCraftNotSupportedException extends RuntimeException {
     public AirCraftNotSupportedException(String type) {

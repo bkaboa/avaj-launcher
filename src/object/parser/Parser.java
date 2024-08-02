@@ -1,4 +1,4 @@
-package object.parser;
+package src.object.parser;
 
 import java.io.File;
 import java.util.Scanner;
@@ -14,7 +14,7 @@ public class Parser {
         return SingletonHolder.INSTANCE;
     }
 
-    public static void main(String filePath)  throws Exception {
+    public void parse(String filePath)  throws Exception {
         Scanner scanner = new Scanner(new File(filePath));
         String line = scanner.nextLine();
         System.out.println(line);

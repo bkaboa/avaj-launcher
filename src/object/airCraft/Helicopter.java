@@ -1,20 +1,20 @@
-package object.airCraft;
+package src.object.airCraft;
 
 import java.io.IOException;
-import object.airCraft.coordinates.Coordinates;
-import object.exception.UnsupportedWeatherException;
-import object.logger.Logger;
+import src.object.airCraft.coordinates.Coordinates;
+import src.object.exception.UnsupportedWeatherException;
+import src.object.logger.Logger;
 
-enum WeatherLog {
+enum HelicoLog {
     SUN("SUN", "sunny sunglass"),
     RAIN("RAIN", "rainy oooooooh"),
     FOG("FOG", "foggy roting houla"),
-    SNOW("SNOW", "snowy houla rotor");
+    snow("snow", "snowy houla rotor");
 
     private final String weather;
     private final String message;
 
-    WeatherLog(String p_weather, String p_message) {
+    HelicoLog(String p_weather, String p_message) {
         this.weather = p_weather;
         this.message = p_message;
     }
@@ -24,7 +24,7 @@ enum WeatherLog {
     }
 
     public static String getMessage(String p_weather) throws UnsupportedWeatherException {
-        for (WeatherLog weather : WeatherLog.values()) {
+        for (HelicoLog weather : HelicoLog.values()) {
             if (weather.getWeather().equals(p_weather)) {
                 return weather.message;
             }
@@ -64,7 +64,7 @@ public class Helicopter extends AirCraft{
         String weather = weatherTower.getWeather(this.coordinates);
         String message;
         
-        message = WeatherLog.getMessage(weather);
+        message = HelicoLog.getMessage(weather);
         try {
             logger.log(this.toString() + message);
             this.Moving(weather);

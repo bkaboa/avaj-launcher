@@ -1,9 +1,16 @@
-package object;
+package src.object;
 
-import object.parser.Parser;
+import src.object.parser.Parser;
 
 public class main {
-   Parser parser = Parser.getInstance(); 
+    static final Parser parser = Parser.getInstance();
 
-   parser
+    public static void main(String[] args) {
+        System.err.println("args: " + args[0]);
+        try {
+            parser.parse(args[0]);
+        } catch (Exception e) {
+            System.out.println("error");
+        }
+    }
 }

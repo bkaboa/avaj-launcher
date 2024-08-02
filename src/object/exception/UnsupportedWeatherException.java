@@ -1,4 +1,4 @@
-package object.exception;
+package src.object.exception;
 
 public class UnsupportedWeatherException extends RuntimeException {
     public UnsupportedWeatherException(String weather) {

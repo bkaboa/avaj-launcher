@@ -1,11 +1,11 @@
-package object.airCraft;
+package src.object.airCraft;
 
 import java.io.IOException;
-import object.airCraft.coordinates.Coordinates;
-import object.exception.UnsupportedWeatherException;
-import object.logger.Logger;
+import src.object.airCraft.coordinates.Coordinates;
+import src.object.exception.UnsupportedWeatherException;
+import src.object.logger.Logger;
 
-enum WeatherLog {
+enum BaloonLog {
     SUN("SUN", "sunny to the max"),
     RAIN("RAIN", "rainy my baloon is wet"),
     FOG("FOG", "foggy nothing to see"),
@@ -14,7 +14,7 @@ enum WeatherLog {
     private final String weather;
     private final String message;
 
-    WeatherLog(String p_weather, String p_message) {
+    BaloonLog(String p_weather, String p_message) {
         this.weather = p_weather;
         this.message = p_message;
     }
@@ -24,7 +24,7 @@ enum WeatherLog {
     }
 
     public static String getMessage(String p_weather) throws UnsupportedWeatherException {
-        for (WeatherLog weather : WeatherLog.values()) {
+        for (BaloonLog weather : BaloonLog.values()) {
             if (weather.getWeather().equals(p_weather)) {
                 return weather.message;
             }
@@ -64,7 +64,7 @@ public class Baloon extends AirCraft{
         String weather = weatherTower.getWeather(this.coordinates);
         String message;
         
-        message = WeatherLog.getMessage(weather);
+        message = BaloonLog.getMessage(weather);
         try {
             logger.log(this.toString() + message);
             this.Moving(weather);

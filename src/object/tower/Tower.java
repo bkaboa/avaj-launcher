@@ -1,7 +1,7 @@
-package object.tower;
+package src.object.tower;
 import java.util.ArrayList;
 import java.util.List;
-import object.airCraft.Flyable;
+import src.object.airCraft.Flyable;
 
 public class Tower {
     private final List<Flyable> observers = new ArrayList<>();

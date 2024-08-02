@@ -1,6 +1,6 @@
-package object.tower;
-import object.WeatherProvider.WeatherProvider;
-import object.airCraft.coordinates.Coordinates;
+package src.object.tower;
+import src.object.WeatherProvider.WeatherProvider;
+import src.object.airCraft.coordinates.Coordinates;
 
 public class WeatherTower extends Tower {
     public WeatherTower() {}

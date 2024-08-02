@@ -1,9 +1,10 @@
 #!/bin/bash
-if ( ! $1 ); then
+echo $1
+if [ ! $1 ]; then
   echo "Usage: ./run.sh <filename> without .txt"
   exit 1
 fi
-if ( $1 = "clean"); then
+if [ $1 = "clean"]; then
   find . -name "*.class" -delete
   rm source.txt
 else

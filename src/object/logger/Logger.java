@@ -1,4 +1,4 @@
-package object.logger;
+package src.object.logger;
 
 import java.io.File;
 import java.io.FileWriter;
